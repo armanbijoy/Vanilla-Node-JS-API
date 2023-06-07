@@ -1,11 +1,9 @@
 const fs = require('fs')
 
-function writeDatatoFile(filename, content){
+function writeDataTofile(filename, content){
     fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err)=>{
-        if(err) console.log(err)
+        console.log(err)
     })
 }
 
-module.exports = {
-    writeDatatoFile
-}
+module.exports = { writeDataTofile}
